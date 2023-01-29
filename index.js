@@ -88,12 +88,17 @@ var finances = [
     ];
 
 // Total number of months included in dataset
-const startDate = new Date(2010, 1); // Jan 2010
-const endDate = new Date(2017, 2); // Feb 2017
-
-const monthDiff = endDate.getMonth() - startDate.getMonth() + 
-    (12 * (endDate.getFullYear() - startDate.getFullYear()));
-        console.log(monthDiff); // 85
+console.log("Total number of months in the dataset is = " + finances.length);
 
 // Net total amount of Profit/Losses over the entire period
+var total = 0;
+    for (i=0; i<finances.length; i++) {
+    total += finances[i][1];
+    }
+    console.log("Net total amount of profit/loss is = " + total);
 
+// Average of the changes in profit/losses over the entire period
+// var Average = 0;
+//     for (i=0; i<finances.length; i++) {
+
+//     }
