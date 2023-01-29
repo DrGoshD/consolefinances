@@ -86,3 +86,14 @@ var finances = [
     ['Jan-2017', 138230],
     ['Feb-2017', 671099]
     ];
+
+// Total number of months included in dataset
+const startDate = new Date(2010, 1); // Jan 2010
+const endDate = new Date(2017, 2); // Feb 2017
+
+const monthDiff = endDate.getMonth() - startDate.getMonth() + 
+    (12 * (endDate.getFullYear() - startDate.getFullYear()));
+        console.log(monthDiff); // 85
+
+// Net total amount of Profit/Losses over the entire period
+
