@@ -95,10 +95,10 @@ var total = 0;
     for (i=0; i<finances.length; i++) {
     total += finances[i][1];
     }
-    console.log("Net total amount of profit/loss is = " + total);
+    console.log("Net total amount of profit/losses is = " + total);
 
 // Average of the changes in profit/losses over the entire period
-// var Average = 0;
-//     for (i=0; i<finances.length; i++) {
-
-//     }
+for (var i=0; i<finances.length; i++) {
+    total += finances[i][1];
+} var Average = total / finances.length;
+    console.log("Average of changes if profit/losses over the entire period is = " + Average);
