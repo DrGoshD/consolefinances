@@ -101,4 +101,10 @@ var total = 0;
 for (var i=0; i<finances.length; i++) {
     total += finances[i][1];
 } var Average = total / finances.length;
-    console.log("Average of changes if profit/losses over the entire period is = " + Average);
+    console.log("Average of the changes in profit/losses over the entire period is = " + Average);
+
+// Round to the nearest 100th
+function roundNearest100(num) {
+    return Math.round(num / 100) * 100;
+} 
+    console.log("Average change rounded to the 100th is = " +  roundNearest100(892618.0930232558));
