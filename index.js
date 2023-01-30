@@ -108,3 +108,28 @@ function roundNearest100(num) {
     return Math.round(num / 100) * 100;
 } 
     console.log("Average change rounded to the 100th is = " +  roundNearest100(892618.0930232558));
+
+// Greatest increase in profits over the entire period
+// Greatest decrease in losses over the entire period
+const numMonths = finances.length;
+
+var netTotal = 0;
+var totalChange = 0;
+var greatestIncrease = {date: "", amount: 0};
+var greatestDecrease = {date: "", amount: 0};
+
+for (var i = 0; i < numMonths; i++) {
+    const [date, amount] = finances[i];
+    if (i > 0) {
+        if (totalChange > greatestIncrease.amount) {
+            greatestIncrease.date = date;
+            greatestIncrease.amount = totalChange;
+        } else if (totalChange < greatestDecrease.amount) {
+            greatestDecrease.date = date;
+            greatestDecrease.amount = totalChange;
+        }
+    }
+}
+
+console.log('Greatest increase: ' + greatestIncrease.date, greatestIncrease.amount);
+console.log('Greatest decrease: ' + greatestDecrease.date,greatestDecrease.amount);
