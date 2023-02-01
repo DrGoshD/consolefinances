@@ -87,6 +87,10 @@ var finances = [
     ['Feb-2017', 671099]
     ];
 
+// Table view
+console.log("Financial Analysis");
+console.log("-------------------------------------------------------------------------------------")
+
 // Total number of months included in dataset
 console.log("Total number of months in the dataset is = " + finances.length);
 
@@ -111,25 +115,64 @@ function roundNearest100(num) {
 
 // Greatest increase in profits over the entire period
 // Greatest decrease in losses over the entire period
-const numMonths = finances.length;
-
-var netTotal = 0;
-var totalChange = 0;
-var greatestIncrease = {date: "", amount: 0};
-var greatestDecrease = {date: "", amount: 0};
-
-for (var i = 0; i < numMonths; i++) {
-    const [date, amount] = finances[i];
-    if (i > 0) {
-        if (totalChange > greatestIncrease.amount) {
-            greatestIncrease.date = date;
-            greatestIncrease.amount = totalChange;
-        } else if (totalChange < greatestDecrease.amount) {
-            greatestDecrease.date = date;
-            greatestDecrease.amount = totalChange;
-        }
-    }
+for (var index = 0; i < finances.length; i++) {
+    console.log(finances[i][1]);
+    
+    const element = finances[i][1];
+    totalMonths++;
+    totalFluctuation+=element;
 }
 
-console.log('Greatest increase: ' + greatestIncrease.date, greatestIncrease.amount);
-console.log('Greatest decrease: ' + greatestDecrease.date,greatestDecrease.amount);
+var maxMonth = {
+    monthName: '',
+    profit: 0,
+  };
+  
+var minMonth = {
+    monthName: '',
+    profit: 0,
+  };
+  
+finances.forEach((month) => {
+    if (month[1] > maxMonth.profit) {
+      maxMonth.monthName = month[0];
+      maxMonth.profit = month[1];
+    }
+  
+    if (month[1] < minMonth.profit) {
+      minMonth.monthName = month[0];
+      minMonth.profit = month[1];
+    }
+  
+    return { maxMonth, minMonth };
+
+});
+
+console.log("Greatest Increase: " + maxMonth.monthName + ", " + maxMonth.profit);
+console.log("Greatest Decrease: " + minMonth.monthName + ", " + minMonth.profit);
+
+
+// Pull table data from js to html
+
+// var myArray = [
+//     {'name':'Total Months','value':finances.length},
+//     {'name':'Total','value':total},
+//     {'name':'Average Change','value':Average},
+//     {'name':'Greatest increase in Profits','value': }
+//     {'name':'Greatest decrease in Losses','value': }
+// ]
+
+// buildTable(myArray)
+
+// function buildTable(data) {
+//     var table = document.getElementById('myTable')
+
+//     for (var i = 0; i < data.length; i++) {
+//         var row =   '<tr>
+//                         <td>${data[i].name}</td>
+//                         <td>${data[i].value}</td>
+//                     </tr>'
+//         table.innerHTML += row
+//     }
+        
+// }
