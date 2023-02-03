@@ -20,5 +20,5 @@ file:///C:/Users/dr4g0/Desktop/BootClass/homework/consolefinances/index.html
 GitHub URL:
 https://drgoshd.github.io/consolefinances/
 
-
+## Screenshot of the deployed application
 
