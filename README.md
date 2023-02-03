@@ -22,3 +22,4 @@ https://drgoshd.github.io/consolefinances/
 
 ## Screenshot of the deployed application
 
+https://github.com/DrGoshD/consolefinances/blob/main/assets/Deployed.jpg
