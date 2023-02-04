@@ -22,6 +22,4 @@ https://drgoshd.github.io/consolefinances/
 
 ## Screenshot of the deployed application
 
-Just click here ![Console Finances](../consolefinances/assets/Deployed.jpg?raw=true) to view the end result.
-
-https://github.com/DrGoshD/consolefinances/blob/main/assets/Deployed.jpg
+Just click here ![Console Finances](/assets/Deployed.jpg?raw=true) to view the end result.
